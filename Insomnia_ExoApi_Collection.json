@@ -1,0 +1,115 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-02T11:15:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_exoapi_ativ4",
+      "parentId": null,
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "name": "ExoApi - Atividade 4 (CRUD Projetos)",
+      "description": "Coleção de testes do CRUD completo de Projetos da Exo.WebApi no Insomnia",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_exoapi_base",
+      "parentId": "wrk_exoapi_ativ4",
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://localhost:7154/api/projetos"
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "req_listar_projetos",
+      "parentId": "wrk_exoapi_ativ4",
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "url": "https://localhost:7154/api/projetos/",
+      "name": "1. Listar Projetos (GET)",
+      "description": "Lista todos os projetos cadastrados no banco de dados ExoApi (Retorno esperado: 200 OK).",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    },
+    {
+      "_id": "req_cadastrar_projeto",
+      "parentId": "wrk_exoapi_ativ4",
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "url": "https://localhost:7154/api/projetos/",
+      "name": "2. Cadastrar Projeto (POST)",
+      "description": "Cadastra um novo projeto (Projeto D - Senai FIT) no banco de dados (Retorno esperado: 201 Created).",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nomeDoProjeto\": \"Projeto D - Senai FIT\",\n\t\"area\": \"Saúde\",\n\t\"status\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_buscar_por_id",
+      "parentId": "wrk_exoapi_ativ4",
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "url": "https://localhost:7154/api/projetos/4",
+      "name": "3. Buscar Projeto por ID (GET {id})",
+      "description": "Consulta individualmente o projeto pelo ID 4 (Retorno esperado: 200 OK ou 404 NotFound).",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    },
+    {
+      "_id": "req_atualizar_projeto",
+      "parentId": "wrk_exoapi_ativ4",
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "url": "https://localhost:7154/api/projetos/4",
+      "name": "4. Atualizar Projeto (PUT {id})",
+      "description": "Atualiza os dados do projeto de ID 4 para Projeto D - Senai Games (Retorno esperado: 204 No Content).",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nomeDoProjeto\": \"Projeto D - Senai Games\",\n\t\"area\": \"Entretenimento\",\n\t\"status\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_deletar_projeto",
+      "parentId": "wrk_exoapi_ativ4",
+      "modified": 1730546100000,
+      "created": 1730546100000,
+      "url": "https://localhost:7154/api/projetos/4",
+      "name": "5. Deletar Projeto (DELETE {id})",
+      "description": "Remove o projeto de ID 4 do banco de dados (Retorno esperado: 204 No Content).",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    }
+  ]
+}
